@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karl Schroth | Operational Systems Architect</title>
+  <!-- Fonts: Space Grotesk (headings) and Roboto Mono (technial text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body
+  class="bg-[#0d0d12] text-slate-300 min-h-screen blueprint-bg relative z-0 selection:bg-neon-cyan selection:text-black">
+
+  <!-- Top Nav / Overlay Line -->
+  <div class="fixed top-0 left-0 w-full h-[1px] bg-neon-cyan/50 z-50 shadow-[0_0_10px_rgba(0,240,255,0.5)]"></div>
+
+  <!-- Main Content Container with padding -->
+  <main class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+
+    <!-- ==============================================
+           SECTION 1: THE HERO 
+           ============================================== -->
+    <section id="hero"
+      class="min-h-[80vh] md:min-h-[90vh] flex flex-col justify-center relative pt-24 md:pt-20 fade-in-section is-visible">
+
+      <!-- Schematic / Terminal Decoration -->
+      <div class="absolute top-28 left-0 text-[10px] text-neon-cyan/60 font-mono flex flex-col gap-1 hidden lg:flex">
+        <span>SYS.INIT // 2026.1K</span>
+        <span>STATUS: ONLINE</span>
+        <span>HPT_MODULE: ACTIVE</span>
+        <div class="w-12 h-[1px] bg-neon-cyan/30 mt-2"></div>
+      </div>
+
+      <div class="border-l-2 border-neon-cyan pl-6 md:pl-10 relative">
+        <!-- Blinking Cursor Effect on Header -->
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white tracking-tight uppercase mb-4 glow-text-cyan break-words">
+          Karl Schroth<span class="animate-pulse flex-none">_</span>
+        </h1>
+
+        <h2
+          class="text-lg md:text-2xl text-neon-pink font-mono tracking-widest uppercase mb-6 md:mb-8 glow-text-pink leading-snug">
+          Operational Systems Architect
+        </h2>
+
+        <p
+          class="max-w-2xl text-base md:text-xl leading-relaxed text-slate-300 mb-8 md:mb-10 border-l border-schematic-line-strong pl-4 bg-black/30 backdrop-blur-sm md:bg-transparent p-4 md:p-0 cut-corner md:clip-none">
+          "I build the operational machinery that scales <span class="text-white font-medium">Frontier Tech</span>.
+          Eliminating structural friction for founders in Interactive Entertainment, Aerospace, and SaaS."
+        </p>
+
+        <a href="mailto:karl@karlanddone.com"
+          class="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-neon-orange text-neon-orange font-bold font-mono text-sm md:text-base uppercase tracking-wider hover:bg-neon-orange/10 hover:glow-border-orange transition-all duration-300 cut-corner group crosshair-corners">
+          <span>Initiate Diagnostic</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+        <span class="text-[10px] tracking-widest text-neon-cyan uppercase">Scroll Sequence</span>
+        <div class="w-[1px] h-12 bg-gradient-to-b from-neon-cyan to-transparent"></div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+           SECTION 2: THE PHILOSOPHY
+           ============================================== -->
+    <section id="philosophy" class="py-16 md:py-24 relative fade-in-section">
+
+      <!-- Decorative grid box -->
+      <div
+        class="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 border border-neon-cyan/20 grid grid-cols-4 grid-rows-4 hidden xl:grid pointer-events-none z-[-1]">
+        <div class="border-r border-b border-neon-cyan/10"></div>
+        <div class="border-r border-b border-neon-cyan/10"></div>
+        <div class="border-r border-b border-neon-cyan/10"></div>
+        <div class="border-b border-neon-cyan/10 bg-neon-pink/5"></div>
+        <div class="border-r border-b border-neon-cyan/10"></div>
+        <div class="border-r border-b border-neon-cyan/10 bg-neon-cyan/5"></div>
+        <div class="border-r border-b border-neon-cyan/10"></div>
+        <div class="border-b border-neon-cyan/10"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 border-t-2 border-neon-pink pt-4">
+          <span class="text-xs text-neon-pink mb-2 block font-mono">001 // Core Premise / The Architect</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mb-6">The<br
+              class="hidden lg:block">Multi-Model<br class="hidden lg:block">Method.</h2>
+
+          <!-- Picture integration -->
+          <div
+            class="relative w-full max-w-sm mx-auto lg:mx-0 mt-8 mb-8 lg:mb-0 crosshair-corners p-2 border border-schematic-line bg-black/40">
+            <div
+              class="absolute inset-0 bg-neon-cyan/10 mix-blend-overlay pointer-events-none z-10 transition-opacity hover:opacity-0 duration-500">
+            </div>
+            <img src="/karl_profile.jpg" alt="Karl Schroth"
+              class="w-full h-auto object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cut-corner">
+            <div
+              class="absolute bottom-4 right-4 text-[10px] font-mono text-neon-cyan bg-black/80 px-2 py-1 border border-neon-cyan/30 z-20">
+              SYS_ARCH: K.SCHROTH</div>
+          </div>
+        </div>
+
+        <div
+          class="lg:col-span-7 bg-[#0d0d12]/90 xl:bg-black/40 border border-schematic-line-strong p-6 sm:p-8 md:p-12 cut-corner-reverse backdrop-blur-md shadow-2xl relative crosshair-corners">
+          <!-- Decorative Terminal Dots -->
+          <div class="absolute top-4 right-4 flex gap-2">
+            <div class="w-2 h-2 rounded-full bg-neon-pink/50"></div>
+            <div class="w-2 h-2 rounded-full bg-neon-cyan/50"></div>
+            <div class="w-2 h-2 rounded-full bg-neon-orange/50"></div>
+          </div>
+
+          <p class="text-base md:text-lg leading-relaxed text-slate-300 font-mono mt-4 md:mt-0">
+            Most agencies fail because they treat operational rot as a <span class="text-neon-pink">"people
+              problem."</span> In frontier tech, the human and the system are the exact same engine.
+          </p>
+          <br>
+          <p class="text-base md:text-lg leading-relaxed text-slate-300 font-mono">
+            I utilize empirical <strong class="text-neon-cyan font-normal drop-shadow-md">Human Performance Technology
+              (HPT)</strong> to diagnose structural bottlenecks, build bespoke operational machinery, and hardwire
+            sustainable workflows into high-velocity environments—without breaking company culture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+           SECTION 3: THE ARCHITECTURE
+           ============================================== -->
+    <section id="architecture" class="py-16 md:py-24 border-t border-schematic-line-strong relative fade-in-section">
+      <div class="mb-12 md:mb-16">
+        <span class="text-xs text-neon-cyan mb-2 block font-mono">002 // Capabilities_Matrix</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white uppercase tracking-wider glow-text-cyan">The
+          Architecture</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="border border-neon-cyan/30 bg-black/60 p-8 hover:bg-black hover:border-neon-cyan transition-colors duration-300 group">
+          <div class="text-neon-cyan font-mono text-sm mb-4 pb-4 border-b border-neon-cyan/30 flex justify-between">
+            <span>HPT_DIAGNOSTIC</span>
+            <span>// 01</span>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-4">Velocity Gap Analysis</h3>
+          <p class="text-sm text-slate-400 font-mono leading-relaxed group-hover:text-slate-300 transition-colors">
+            Rigorous, data-driven audits of scaling organizations to isolate exact structural friction—distinguishing
+            between system failures, skill deficits, and incentive misalignments.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="border border-neon-pink/30 bg-black/60 p-8 hover:bg-black hover:border-neon-pink transition-colors duration-300 group">
+          <div class="text-neon-pink font-mono text-sm mb-4 pb-4 border-b border-neon-pink/30 flex justify-between">
+            <span>SOLUTION_ARCH</span>
+            <span>// 02</span>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-4">Multi-Model Framework</h3>
+          <p class="text-sm text-slate-400 font-mono leading-relaxed group-hover:text-slate-300 transition-colors">
+            Discarding one-size-fits-all consulting. Designing custom operational machinery using a modular stack of
+            frameworks (Lean, Agile, Systems Thinking, ADDIE).
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="border border-neon-orange/30 bg-black/60 p-8 hover:bg-black hover:border-neon-orange transition-colors duration-300 group relative overflow-hidden">
+          <!-- Glitch background effect on hover -->
+          <div
+            class="absolute inset-0 bg-neon-orange/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+          </div>
+
+          <div class="relative z-10">
+            <div
+              class="text-neon-orange font-mono text-sm mb-4 pb-4 border-b border-neon-orange/30 flex justify-between">
+              <span>CHANGE_MGT</span>
+              <span>// 03</span>
+            </div>
+            <h3 class="text-xl font-heading text-white mb-4">Operational Hardwiring</h3>
+            <p class="text-sm text-slate-400 font-mono leading-relaxed group-hover:text-slate-300 transition-colors">
+              Acting as the "empathetic authority" on the floor, deploying procedural overhauls through rapid-iteration
+              feedback loops to ensure permanent adoption by creative and engineering teams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+           SECTION 4: PROPRIETARY BUILDS (PRODUCTS)
+           ============================================== -->
+    <section id="builds" class="py-16 md:py-24 border-t border-schematic-line-strong relative fade-in-section">
+
+      <div class="mb-12 md:mb-16">
+        <span class="text-xs text-neon-orange mb-2 block font-mono">003 // Active_Projects</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white uppercase tracking-wider glow-text-orange">
+          Proprietary Builds</h2>
+      </div>
+
+      <div class="space-y-8 md:space-y-12">
+
+        <!-- Product 1: SOP Bucket -->
+        <div class="flex flex-col md:flex-row items-stretch group">
+          <div
+            class="w-full md:w-5/12 bg-black/40 border border-neon-cyan/20 p-6 md:p-8 flex flex-col justify-center relative overflow-hidden cut-corner order-1 md:order-none">
+            <div
+              class="absolute -top-4 -right-4 w-24 h-24 bg-neon-cyan/10 rounded-full blur-2xl group-hover:bg-neon-cyan/20 transition-all duration-500">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-2 relative z-10">SOP Bucket</h3>
+            <span class="text-neon-cyan font-mono text-xs md:text-sm tracking-widest uppercase relative z-10">Compliance
+              & Operations SaaS</span>
+          </div>
+
+          <div
+            class="w-full md:w-7/12 bg-[#0d0d12] md:border-y md:border-r border-schematic-line-strong p-6 md:p-8 flex flex-col justify-center border-x border-b md:border-l-0 border-schematic-line-strong md:border-b-0 order-2 md:order-none mt-2 md:mt-0">
+            <p class="text-sm md:text-base text-slate-300 font-mono leading-relaxed">
+              A proprietary software platform engineered to systematize compliance and Standard Operating Procedures
+              (SOPs). Built to untangle complex logistical networks in heavily regulated environments.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2 md:gap-3">
+              <span
+                class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-mono border border-slate-700 text-slate-400 bg-slate-900">SaaS</span>
+              <span
+                class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-mono border border-slate-700 text-slate-400 bg-slate-900">Compliance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Enjoyably -->
+        <div class="flex flex-col md:flex-row items-stretch group">
+          <div
+            class="w-full md:w-5/12 bg-black/40 border border-neon-pink/20 p-6 md:p-8 flex flex-col justify-center relative overflow-hidden cut-corner order-1 md:order-none">
+            <div
+              class="absolute -top-4 -right-4 w-24 h-24 bg-neon-pink/10 rounded-full blur-2xl group-hover:bg-neon-pink/20 transition-all duration-500">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-2 relative z-10">Enjoyably</h3>
+            <span class="text-neon-pink font-mono text-xs md:text-sm tracking-widest uppercase relative z-10">Custom L&D
+              Engine</span>
+          </div>
+
+          <div
+            class="w-full md:w-7/12 bg-[#0d0d12] md:border-y md:border-r border-schematic-line-strong p-6 md:p-8 flex flex-col justify-center border-x border-b md:border-l-0 border-schematic-line-strong md:border-b-0 order-2 md:order-none mt-2 md:mt-0">
+            <p class="text-sm md:text-base text-slate-300 font-mono leading-relaxed">
+              A scalable internal training architecture tailored for interactive tech and game studios. Leverages
+              advanced instructional design frameworks to eliminate onboarding bottlenecks and accelerate team velocity.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2 md:gap-3">
+              <span
+                class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-mono border border-slate-700 text-slate-400 bg-slate-900">Training_Engine</span>
+              <span
+                class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-mono border border-slate-700 text-slate-400 bg-slate-900">Gaming</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 5: PORTFOLIO DATA-GRID (PLACEHOLDER)
+         ============================================== -->
+    <section id="portfolio" class="py-16 md:py-24 border-t border-schematic-line-strong relative fade-in-section">
+      <div class="mb-8 md:mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs text-white/50 mb-2 block font-mono">004 // Archives</span>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-white uppercase tracking-wider">Historical Loadout
+          </h2>
+        </div>
+        <a href="#"
+          class="text-neon-cyan font-mono text-sm hover:text-white transition-colors border-b border-neon-cyan/30 hover:border-white w-fit cursor-not-allowed opacity-50">ACCESS_FULL_LOG
+          -></a>
+      </div>
+
+      <!-- Terminal Table Container -->
+      <div class="w-full overflow-x-auto border border-schematic-line bg-black/60 relative p-1 pb-0 crosshair-corners">
+        <table class="w-full text-left font-mono text-sm min-w-[600px]">
+          <thead class="text-xs text-slate-500 uppercase bg-[#0a0a0a] border-b border-schematic-line">
+            <tr>
+              <th class="px-4 py-3 font-normal border-r border-schematic-line/50 w-32">Year</th>
+              <th class="px-4 py-3 font-normal border-r border-schematic-line/50">Client / Node</th>
+              <th class="px-4 py-3 font-normal border-r border-schematic-line/50 hidden md:table-cell">Frameworks
+                Deployed</th>
+              <th class="px-4 py-3 font-normal">Status</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            <tr
+              class="border-b border-schematic-line/30 hover:bg-neon-cyan/5 transition-colors group cursor-not-allowed opacity-50">
+              <td class="px-4 py-4 border-r border-schematic-line/50 text-neon-cyan/70">[2023]</td>
+              <td class="px-4 py-4 border-r border-schematic-line/50 text-white font-medium">Awaiting Data Link...</td>
+              <td class="px-4 py-4 border-r border-schematic-line/50 hidden md:table-cell text-slate-500">HPT, Systems
+                Thinking</td>
+              <td class="px-4 py-4"><span class="inline-block w-2 h-2 rounded-full bg-slate-600 mr-2"></span>PENDING
+              </td>
+            </tr>
+            <tr
+              class="border-b border-schematic-line/30 hover:bg-neon-cyan/5 transition-colors group cursor-not-allowed opacity-30">
+              <td class="px-4 py-4 border-r border-schematic-line/50 text-neon-cyan/70">[2022]</td>
+              <td class="px-4 py-4 border-r border-schematic-line/50 text-white font-medium">Awaiting Data Link...</td>
+              <td class="px-4 py-4 border-r border-schematic-line/50 hidden md:table-cell text-slate-500">Agile, Lean
+              </td>
+              <td class="px-4 py-4"><span class="inline-block w-2 h-2 rounded-full bg-slate-600 mr-2"></span>PENDING
+              </td>
+            </tr>
+            <tr class="hover:bg-neon-cyan/5 transition-colors group cursor-not-allowed opacity-20">
+              <td class="px-4 py-4 border-r border-schematic-line/50 text-neon-cyan/70">[2021]</td>
+              <td class="px-4 py-4 border-r border-schematic-line/50 text-white font-medium">Awaiting Data Link...</td>
+              <td class="px-4 py-4 border-r border-schematic-line/50 hidden md:table-cell text-slate-500">ADDIE</td>
+              <td class="px-4 py-4"><span class="inline-block w-2 h-2 rounded-full bg-slate-600 mr-2"></span>PENDING
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 6: THE FOOTER
+         ============================================== -->
+    <footer class="py-12 border-t border-schematic-line-strong mt-24 relative fade-in-section">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+        <div>
+          <span class="text-xs text-neon-cyan/80 font-mono block mb-4 uppercase tracking-widest">Connect</span>
+          <a href="mailto:karl@karlanddone.com"
+            class="text-lg font-mono text-white hover:text-neon-cyan transition-colors block mb-2">karl@karlanddone.com</a>
+          <p class="text-slate-400 font-mono text-sm tracking-wider">Los Angeles, CA</p>
+          <div class="w-12 h-[1px] bg-neon-cyan/30 mt-6"></div>
+        </div>
+
+        <div>
+          <span class="text-xs text-neon-pink/80 font-mono block mb-4 uppercase tracking-widest">Profiles</span>
+          <div class="flex flex-col gap-2">
+            <a href="https://www.linkedin.com/in/karlanddone/" target="_blank"
+              class="font-mono text-slate-300 hover:text-neon-pink transition-colors w-fit flex items-center gap-2">
+              <span class="text-xs text-slate-500">>></span> LinkedIn_Network
+            </a>
+            <a href="#"
+              class="font-mono text-slate-300 text-slate-500 hover:text-neon-pink transition-colors w-fit flex items-center gap-2">
+              <span class="text-xs text-slate-500">>></span> GitHub_Repository (Offline)
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-end md:justify-end">
+          <a href="#hero"
+            class="w-12 h-12 border border-schematic-line-strong flex items-center justify-center hover:bg-neon-cyan/5 hover:border-neon-cyan transition-all text-slate-400 hover:text-neon-cyan crosshair-corners">
+            <!-- Up arrow SVG -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 15l7-7 7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div
+        class="pt-8 border-t border-schematic-line-strong/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-mono text-xs text-slate-500 tracking-widest uppercase">
+          System Architecture by <span class="text-slate-300">KarlAndDone</span>
+        </p>
+        <div
+          class="text-[10px] font-mono text-neon-cyan/50 tracking-widest bg-neon-cyan/5 px-3 py-1 border border-neon-cyan/20">
+          TERMINAL // <span class="animate-pulse">_</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Script injected by Vite -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

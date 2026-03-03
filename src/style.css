@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00F0FF;
+  --color-neon-pink: #FF00FF;
+  --color-neon-orange: #FF5F15;
+  --color-industrial-bg: #0d0d12;
+  --color-schematic-line: rgba(0, 240, 255, 0.15);
+  --color-schematic-line-strong: rgba(0, 240, 255, 0.4);
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+:root {
+  background-color: var(--color-industrial-bg);
+  color: #e2e8f0;
+}
+
+body {
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Blueprint / Schematic Background */
+.blueprint-bg {
+  background-color: var(--color-industrial-bg);
+  background-image:
+    linear-gradient(var(--color-schematic-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-schematic-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+  position: relative;
+}
+
+.blueprint-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(var(--color-schematic-line-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-schematic-line-strong) 1px, transparent 1px);
+  background-size: 200px 200px;
+  background-position: center center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Neon Glow Utilities */
+.glow-text-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+.glow-text-pink {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.glow-border-cyan {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.glow-border-orange {
+  box-shadow: 0 0 10px rgba(255, 95, 21, 0.3), inset 0 0 10px rgba(255, 95, 21, 0.1);
+}
+
+/* Utility classes for aesthetic borders */
+.border-schematic {
+  border: 1px solid var(--color-schematic-line-strong);
+}
+
+.border-schematic-cyan {
+  border: 1px solid rgba(0, 240, 255, 0.5);
+}
+
+.border-schematic-pink {
+  border: 1px solid rgba(255, 0, 255, 0.5);
+}
+
+/* Cut corner aesthetic (clip-path) */
+.cut-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+}
+
+.cut-corner-reverse {
+  clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+}
+
+/* Crosshair corners */
+.crosshair-corners {
+  position: relative;
+}
+
+.crosshair-corners::before,
+.crosshair-corners::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(0, 240, 255, 0.8);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.crosshair-corners::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+
+.crosshair-corners::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+/* Fade in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
