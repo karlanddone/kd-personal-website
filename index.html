@@ -723,8 +723,9 @@
                 <h3 class="font-mono text-neon-cyan text-sm tracking-widest uppercase mb-2">Directive 01</h3>
                 <h4 class="text-xl font-heading font-bold text-white mb-2">Systems Over Symptoms</h4>
                 <p class="text-slate-400 font-mono text-sm leading-relaxed">
-                  I do not believe in "people problems." In frontier tech, operational friction is almost always a
-                  structural engineering failure. I fix the machinery; I don't blame the operator.
+                  What looks like a "people problem" is almost always a structural failure. When an individual
+                  struggles, it usually means they are operating inside the wrong architecture. I diagnose the machinery
+                  before I blame the operator.
                 </p>
               </div>
 
@@ -871,42 +872,94 @@
       </section>
 
       <!-- ==============================================
-         SECTION 6: THE FOOTER
+         SECTION 6: OPERATOR PROFILE (FOOTER & ABOUT)
          ============================================== -->
-      <footer class="py-12 border-t border-schematic-line-strong mt-24 relative fade-in-section">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
-
-          <div>
-            <span class="text-xs text-neon-pink/80 font-mono block mb-4 uppercase tracking-widest">Profiles</span>
-            <div class="flex flex-col gap-2 mb-4">
-              <a href="https://www.linkedin.com/in/karlanddone/" target="_blank"
-                class="font-mono text-slate-300 hover:text-neon-pink transition-colors w-fit flex items-center gap-2">
-                <span class="text-xs text-slate-500">>></span> LinkedIn_Network
-              </a>
-            </div>
-            <p class="text-slate-400 font-mono text-sm tracking-wider">Los Angeles, CA</p>
-          </div>
-
-          <div class="flex items-end md:justify-end">
-            <a href="#hero"
-              class="w-12 h-12 border border-schematic-line-strong flex items-center justify-center hover:bg-neon-cyan/5 hover:border-neon-cyan transition-all text-slate-400 hover:text-neon-cyan crosshair-corners">
-              <!-- Up arrow SVG -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 15l7-7 7 7"></path>
-              </svg>
-            </a>
-          </div>
-
+      <footer class="mt-24 border-t border-neon-cyan/20 bg-[#0a0a0e] relative fade-in-section">
+        <!-- Glow Line -->
+        <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-neon-cyan/50 to-transparent">
         </div>
 
-        <div
-          class="pt-8 border-t border-schematic-line-strong/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="font-mono text-xs text-slate-500 tracking-widest uppercase">
-            System Architecture by <span class="text-slate-300">KarlAndDone</span>
-          </p>
+        <div class="max-w-7xl mx-auto px-0 md:px-12 lg:px-24 py-0 md:py-24">
           <div
-            class="text-[10px] font-mono text-neon-cyan/50 tracking-widest bg-neon-cyan/5 px-3 py-1 border border-neon-cyan/20">
-            TERMINAL // <span class="animate-pulse">_</span>
+            class="flex flex-col md:flex-row shadow-[0_0_30px_rgba(0,0,0,0.8)] border-y md:border border-schematic-line-strong overflow-hidden relative">
+
+            <!-- Left: Photos -->
+            <div class="w-full md:w-1/2 relative h-[60vh] md:h-auto md:min-h-[500px]">
+              <!-- Mobile Photo -->
+              <img src="/karl_about_mobile.jpg" alt="Karl Schroth - Mobile Profile"
+                class="w-full h-full object-cover object-center block md:hidden filter opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700">
+              <!-- Desktop Photo -->
+              <img src="/karl_about_desktop.jpg" alt="Karl Schroth - Desktop Profile"
+                class="w-full h-full object-cover object-center hidden md:block filter opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700">
+
+              <!-- Scanning Line Overlay on Images -->
+              <div class="absolute inset-0 bg-neon-cyan/5 mix-blend-overlay pointer-events-none"></div>
+              <div
+                class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%] pointer-events-none opacity-20">
+              </div>
+            </div>
+
+            <!-- Right: Links & Sign-Off -->
+            <div
+              class="w-full md:w-1/2 bg-[#050508] p-8 md:p-12 lg:p-16 flex flex-col justify-between border-t md:border-t-0 md:border-l border-schematic-line-strong crosshair-corners group">
+
+              <!-- Corner Decorative dots -->
+              <div
+                class="absolute top-2 right-2 w-1 h-1 bg-neon-cyan/50 group-hover:bg-neon-cyan transition-colors hidden md:block">
+              </div>
+              <div
+                class="absolute bottom-2 right-2 w-1 h-1 bg-neon-cyan/50 group-hover:bg-neon-pink transition-colors hidden md:block">
+              </div>
+
+              <div class="space-y-8">
+                <div>
+                  <h3
+                    class="text-3xl md:text-4xl font-heading font-bold text-white uppercase tracking-tight glow-text-cyan mb-2">
+                    Karl Schroth</h3>
+                  <p class="font-mono text-neon-pink text-xs tracking-widest uppercase">System Architecture by
+                    KarlAndDone</p>
+                  <div class="w-12 h-[1px] bg-neon-cyan/30 mt-6"></div>
+                </div>
+
+                <div class="space-y-8">
+                  <div>
+                    <span class="text-[10px] text-slate-500 font-mono block mb-3 uppercase tracking-widest">Base of
+                      Operations</span>
+                    <p class="text-slate-300 font-mono text-sm tracking-widest uppercase flex items-center gap-3">
+                      <span class="w-2 h-2 rounded-full bg-neon-cyan animate-pulse"></span>
+                      Los Angeles, CA
+                    </p>
+                  </div>
+
+                  <div>
+                    <span class="text-[10px] text-slate-500 font-mono block mb-3 uppercase tracking-widest">Profiles &
+                      Networking</span>
+                    <a href="https://www.linkedin.com/in/karlanddone/" target="_blank"
+                      class="font-mono text-white text-sm uppercase tracking-wider hover:text-neon-pink hover:bg-neon-pink/10 border border-transparent hover:border-neon-pink/30 px-3 py-2 -ml-3 transition-all w-fit flex items-center gap-3 group/link">
+                      <span class="text-neon-pink group-hover/link:animate-pulse">>></span> LinkedIn_Network
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Back to top and Terminal tag -->
+              <div class="mt-16 flex flex-row items-end justify-between border-t border-schematic-line-strong/50 pt-8">
+                <div
+                  class="text-[10px] font-mono text-neon-cyan/50 tracking-widest bg-neon-cyan/5 px-3 py-1 border border-neon-cyan/20">
+                  SYS.END // <span class="animate-pulse text-neon-cyan">_</span>
+                </div>
+
+                <a href="#hero"
+                  class="w-12 h-12 border border-schematic-line-strong flex items-center justify-center bg-black/50 hover:bg-neon-cyan hover:border-neon-cyan transition-all text-slate-400 hover:text-black"
+                  aria-label="Back to Top">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </footer>
