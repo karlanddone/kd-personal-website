@@ -60,4 +60,59 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // Tier 2 Archive Toggle Logic
+  const toggleArchiveBtn = document.getElementById('toggle-archive');
+  const fullArchiveSection = document.getElementById('full-archive');
+  const toggleIcon = document.getElementById('toggle-archive-icon');
+
+  if (toggleArchiveBtn && fullArchiveSection) {
+    toggleArchiveBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const isHidden = fullArchiveSection.classList.contains('hidden');
+
+      if (isHidden) {
+        // Reveal
+        fullArchiveSection.classList.remove('hidden');
+        // Small delay to allow display:block to apply before changing opacity for transition
+        setTimeout(() => {
+          fullArchiveSection.classList.remove('opacity-0');
+        }, 50);
+
+        // Update button appearance
+        toggleArchiveBtn.querySelector('span').textContent = 'Collapse Historical Loadout';
+        if (toggleIcon) {
+          toggleIcon.style.transform = 'rotate(180deg)';
+        }
+
+        // Smooth scroll to the top of the archive section, offset for breathing room
+        setTimeout(() => {
+          const y = fullArchiveSection.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }, 120);
+
+      } else {
+        // Hide
+        fullArchiveSection.classList.add('opacity-0');
+
+        // Update button appearance
+        toggleArchiveBtn.querySelector('span').textContent = 'Access Full Historical Loadout';
+        if (toggleIcon) {
+          toggleIcon.style.transform = 'rotate(0deg)';
+        }
+
+        // Wait for opacity transition before hiding
+        setTimeout(() => {
+          fullArchiveSection.classList.add('hidden');
+          // Scroll back up to the portfolio header
+          const portfolioSection = document.getElementById('portfolio');
+          if (portfolioSection) {
+            const y = portfolioSection.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 700); // matches the duration-700 class from HTML
+      }
+    });
+  }
 });
