@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     threshold: 0.15
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove('is-visible'); // Makes animation continuous & multi-directional
       }
     });
   }, observerOptions);
@@ -22,17 +23,37 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Scroll-driven Opacity Fade for Hero Background
+  // Scroll-driven Opacity Fade and Scale for Hero Background / Content
   const heroBg = document.getElementById('hero-bg');
-  if (heroBg) {
-    window.addEventListener('scroll', () => {
-      // Calculate opacity: 1 at top, fading to 0 by 60% of viewport height
-      const fadeThreshold = window.innerHeight * 0.6;
-      let opacity = 1 - (window.scrollY / fadeThreshold);
+  const heroContent = document.getElementById('hero-content');
 
-      // Clamp between 0 and 1
-      opacity = Math.max(0, Math.min(1, opacity));
-      heroBg.style.opacity = opacity;
-    }, { passive: true }); // passive flag for scrolling performance
+  if (heroBg || heroContent) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      if (heroBg) {
+        // Calculate opacity: 1 at top, fading to 0 by 60% of viewport height
+        const fadeThreshold = viewportHeight * 0.6;
+        let opacity = 1 - (scrollY / fadeThreshold);
+        heroBg.style.opacity = Math.max(0, Math.min(1, opacity));
+      }
+
+      if (heroContent) {
+        // Continuous Scroll Velocity for the Hero Text (Scale + Translate + Opacity)
+        // Scale down to 0.9, move down 40px, and fade out before being covered
+        const contentFadeThreshold = viewportHeight * 0.5;
+        let progress = scrollY / contentFadeThreshold;
+        progress = Math.max(0, Math.min(1, progress));
+
+        const scale = 1 - (progress * 0.10); // Shrinks 10%
+        const translateY = progress * 40; // Moves down 40px
+        const opacity = 1 - (progress * 1.5); // Fades completely
+
+        heroContent.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+        heroContent.style.opacity = Math.max(0, opacity);
+        // Will-change hint purely when active could be added, but this is usually cheap 
+      }
+    }, { passive: true });
   }
 });

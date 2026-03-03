@@ -141,6 +141,26 @@ h4,
   visibility: visible;
 }
 
+.trans-delay-100 {
+  transition-delay: 100ms;
+}
+
+.trans-delay-200 {
+  transition-delay: 200ms;
+}
+
+.trans-delay-300 {
+  transition-delay: 300ms;
+}
+
+.trans-delay-400 {
+  transition-delay: 400ms;
+}
+
+.trans-delay-500 {
+  transition-delay: 500ms;
+}
+
 /* ==============================================
    HERO LOAD-IN ANIMATIONS
    ============================================== */
