@@ -41,7 +41,7 @@
 
       <!-- Schematic / Terminal Decoration -->
       <div
-        class="absolute top-28 left-0 text-[10px] text-neon-cyan/60 font-mono flex flex-col gap-1 hidden lg:flex animate-slide-right delay-100">
+        class="fixed top-28 left-6 md:left-12 lg:left-24 text-[10px] text-neon-cyan/60 font-mono flex flex-col gap-1 hidden lg:flex animate-slide-right delay-100 z-10 pointer-events-none">
         <span>SYS.INIT // 2026.1K</span>
         <span>STATUS: ONLINE</span>
         <span>HPT_MODULE: ACTIVE</span>
@@ -86,7 +86,7 @@
 
       <!-- Scroll indicator -->
       <div
-        class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-slide-up delay-700">
+        class="fixed bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-slide-up delay-700 z-10 pointer-events-none">
         <span class="text-[10px] tracking-widest text-neon-cyan uppercase">Scroll Sequence</span>
         <div class="w-[1px] h-12 bg-gradient-to-b from-neon-cyan to-transparent"></div>
       </div>
