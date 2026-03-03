@@ -115,4 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Phase 9 Contact: Random Status Cycler
+  const statusDisplay = document.getElementById('status-display');
+  if (statusDisplay) {
+    const statuses = [
+      '<span class="text-neon-cyan animate-pulse mr-2">●</span> <span class="text-slate-200">SYSTEM STATUS: <span class="text-neon-cyan uppercase">Active</span>. Architecting custom deployments. Accepting select diagnostic consults.</span>',
+      '<span class="text-neon-orange animate-pulse mr-2">●</span> <span class="text-slate-200">CURRENT FOCUS: Deploying custom compliance & L&D SaaS. <span class="text-neon-orange uppercase">Limited bandwidth</span> available for new architecture audits.</span>',
+      '<span class="text-neon-cyan animate-pulse mr-2">●</span> <span class="text-slate-200">STATUS: <span class="text-neon-cyan uppercase">Online</span>. Currently accepting select frontier tech consults.</span>'
+    ];
+
+    // Pick a random status on load
+    const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+
+    // Add a slight delay for "typing" effect simulation, then show it
+    setTimeout(() => {
+      statusDisplay.innerHTML = randomStatus;
+    }, 800);
+  }
 });
+
