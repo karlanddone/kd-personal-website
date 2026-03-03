@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
       } else {
-        entry.target.classList.remove('is-visible'); // Makes animation continuous & multi-directional
+        // Only remove visibility if the element is exiting the BOTTOM of the viewport.
+        // If it exits the top, keep it visible so its transform doesn't push it back into the viewport resulting in an infinite flicker loop.
+        if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove('is-visible');
+        }
       }
     });
   }, observerOptions);
